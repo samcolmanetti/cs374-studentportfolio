@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Log In Page</title>
+</head>
+<body>
+	<form action="#" th:action="@{/login}" th:object="${credential}"
+		method="post">
+		<div>
+			<label> User Name : <input type="text" name="userName" />
+			</label>
+		</div>
+		<div>
+			<label> Password: <input type="password" name="password" />
+			</label>
+		</div>
+		<div>
+			<input type="submit" value="Sign In" />
+		</div>
+	</form>
+
+	<p>
+		Click <a th:href="@{/registerCustomer}">here</a> to register
+	</p>
+</body>
+</html>

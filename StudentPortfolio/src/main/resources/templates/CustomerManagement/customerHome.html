@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<p
+		th:text="'Congratulations! Employee ' + ${customer.email} + ' with password ' + ${customer.password} + ' registered'" />
+	 <p>Click <a th:href="@{/displayMenu}">here</a> to BROWSE the menu.</p>
+	 <p>Click <a th:href="@{/shoppingcart}">here</a> to VIEW your Shopping Cart.</p>
+	 <p>Click <a th:href="@{/updateCustomer}">here</a> to UPDATE your profile.</p>
+	 <p>Click <a th:href="@{/viewCustomer}">here</a> to VIEW your profile.</p>	
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Sign Out" />
+	</form>
+</body>
+</html>

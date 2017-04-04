@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h3>Customer Profile</h3>
+<table>
+	<tr>
+		<td>Email: </td>
+		<td th:text="${customer.email}"/>
+	</tr>
+	<tr>
+		<td>Password: </td>
+		<td th:text="${customer.password}"/>
+	</tr>
+	<tr>
+		<td>Eage: </td>
+		<td th:text="${customer.age}"/>
+	</tr>
+</table>
+	<p>Click <a th:href="@{/updateCustomer}">here</a> to update your profile.</p>
+	<p>Click <a th:href="@{/viewCustomer}">here</a> to view your profile.</p>	
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Sign Out" />
+	</form>
+</body>
+</html>
